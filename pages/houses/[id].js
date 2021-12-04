@@ -23,7 +23,7 @@ export default function House(props) {
     )
 }
 
-export async function getServerSideProps({ query }) {
+export async function getStaticProps({ query }) {
     const { id } = query
 
     return {
