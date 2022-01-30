@@ -1,27 +1,32 @@
 import Head from 'next/head'
 import houses from '../../houses.js'
+import Layout from "../../components/Layout"
 // import { prefix } from '../../utils/prefix.js';
 // import Image from 'next/image'
 
 export default function House(props) {
     return (
-        <div>
-            <Head>
-                <title>{props.house.title}</title>
-            </Head>
-            <img src={props.house.picture} width="100%" alt="House picture" />
-            {/*<Image*/}
-            {/*    alt="House picture"*/}
-            {/*    src={`${prefix}/${props.house.picture}`}*/}
-            {/*    layout="responsive"*/}
-            {/*    objectFit="cover"*/}
-            {/*    width={6}*/}
-            {/*    height={4} />*/}
-            <p>
-                {props.house.type} - {props.house.town}
-            </p>
-            <p>{props.house.title}</p>
-        </div>
+        <Layout
+            content={
+                <div>
+                    <Head>
+                        <title>{props.house.title}</title>
+                    </Head>
+                    <img src={props.house.picture} width="100%" alt="House picture" />
+                    {/*<Image*/}
+                    {/*    alt="House picture"*/}
+                    {/*    src={`${prefix}/${props.house.picture}`}*/}
+                    {/*    layout="responsive"*/}
+                    {/*    objectFit="cover"*/}
+                    {/*    width={6}*/}
+                    {/*    height={4} />*/}
+                    <p>
+                        {props.house.type} - {props.house.town}
+                    </p>
+                    <p>{props.house.title}</p>
+                </div>
+            }
+        />
     )
 }
 

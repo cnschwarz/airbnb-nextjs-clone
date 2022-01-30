@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function House(props) {
     return (
-        <Link href="/houses/[id]" as={'houses/' + props.id}>
+        <Link href="/houses/[id]" as={'/houses/' + props.id}>
             <a>
                 <img src={props.picture} width="100%" alt="House picture" />
                 {/*<Image*/}

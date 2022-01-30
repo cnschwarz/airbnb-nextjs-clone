@@ -27,12 +27,13 @@ jobs:
         run: npm ci
 
       - name: Build my App
-        run: npm run build && npm run export && touch ./out/.nojekyll
+        run: npm run build
+        #&& npm run export && touch ./out/.nojekyll
 
-      - name: Deploy 🚀
-        if: github.ref == 'refs/heads/master'
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
+#      - name: Deploy 🚀
+#        if: github.ref == 'refs/heads/master'
+#        uses: JamesIves/github-pages-deploy-action@4.1.0
+#        with:
+#          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+#          BRANCH: gh-pages # The branch the action should deploy to.
+#          FOLDER: out # The folder the action should deploy.
